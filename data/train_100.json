@@ -1,0 +1,502 @@
+[
+    {
+        "text": "How many people die from snakebite poisoning in the U.S. per year ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "Who was the Columbia Pictures head who forged actor Cliff Robertson 's name on a $1 , 000 check ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "In the song `` Yankee Doodle , '' why did Yankee Doodle stick a feather in his cap and call it macaroni ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "What are the three animals in Sheila Burnford 's The Incredible Journey ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What are the first and last letters of the Greek alphabet ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What two South American countries do n't border Brazil ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What vehicles are raced in the Tour de France ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What is `` Nine Inch Nails '' ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "Who was known as the Time Master in comic books ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What was the first English play written exclusively for children ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What will happen when sodium is put in water ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "Who lives at 24 Sussex Drive , Ottawa ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What woman was Time 's Man of the Year for 1952 ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What college produced the most winning Super Bowl quarterbacks ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "Who died with more than 1 , 000 U.S. patents to his credit ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What Texas city got its name from the Spanish for `` yellow '' ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What is Mikhail Gorbachev 's middle initial ?",
+        "label": 0,
+        "label_name": "ABBR"
+    },
+    {
+        "text": "How many sides does a heptagon have ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "How do you find the area of a circle ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "What is glass made of ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What corporation does Madonna advertise for ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What European country is home to the beer-producing city of Budweis ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What are the developmental stages of a swimmer ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "How many Fig Newtons are there to the pound ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "When did Spielberg direct `` Jaws '' ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "Which thrilled taste buds first - Snickers or 3 Musketeers ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "When is Bastille Day ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "What does each of the utilities cost in Monopoly ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "What city is found in the city of OZ ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What countries have the largest armed forces in the world ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What is osteichthyes ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "Who was Darius ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "How does crosstalk relate to InSb thickness in infrared detectors ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "How many people in America snore ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "How does light travel through the void of space if there is no medium for it to ` wave ' or ` pulse ' .",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "What is the amount of money owed for illegally having a dog on a beach ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "Who died 1 feet from where John F. Kennedy did ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What country and western singer is known as The Silver Fox ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "Which came first , according to Genesis 1 : 2 : 22 - the chicken or the egg ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What makes hamburgers taste like steakburgers ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "What TV sitcom character had the maiden name Ethel Potter ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "How does an ion drive work ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "Where is the Kalahari desert ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What two countries is Andorra nestled between ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "How does Belle describe her life in Beauty and the Beast ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "How many colleges are in Wyoming ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "What 's the name of the actress who starred in the movie , `` Silence of the Lambs '' ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What season does a hiemal activity normally take place in ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "What was the target rate for M3 growth in 1992 ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "What are the four natural aids used in riding a horse ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What did Louis Cartier invent for aviator Santos Dumont in 1940 ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "Who was the last U.S. president to reinstate Selective Service registration ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What is a fear of motion ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What is the longest river in the United States ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What President-to-be was the first member of Congress to enlist following the attack on Pearl Harbor ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What household facility contains a float ball , ballcock , and overflow tube ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What exactly is radiation ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "What is the most expensive car in the world ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "How much waste does an average dairy cow produce in a day ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "Who was the conservationist who served as spokesperson for Post Grape Nuts ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "How many rings are there on a five-zone archery target ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "What percent of world 's fresh water is found in Canada ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "Who is Imam Hussain Ben Ali whom Shia people believe in ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What letter is to the right of K on a typewriter keyboard ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What 's new in the postal world in 1999 ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "Where did King Francis I hang the `` Mona Lisa '' when he owned it ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What year was the ATM first introduced ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "What country borders Denmark to the south ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "When was the first stained glass window made ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "What two cities usually mark the extremes of English Channel swims ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What character in The Beverly Hillbillies has the given names Daisy Moses ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "How do I find a snowboarding website ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "What are some translations of the phrase `` Thank-you '' ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "How do I find a city if I have the area code ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "How much electricity does the brain need to work ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "What causes a person to have constantly sweaty hands and feet ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "How were the days of the week named ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "Name a female figure skater .",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "Where were the 196 Summer Olympics held ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What animal 's tail is called a brush ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What disease is transmitted by the Anopheles mosquito ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What was the favorite sport of Tom Wolfe 's The Pump House Gang ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What is the full form of .com ?",
+        "label": 0,
+        "label_name": "ABBR"
+    },
+    {
+        "text": "How do companies cut paper so thin ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "Name a canine cartoon character other than Huckleberry Hound to have a voice by Daws Butler .",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What are the five richest countries in the world ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What do you call a Poker hand with five cards of the same suit ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What is the best selling computer model ever ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "How can I find out my biorhythm ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "Which radio stations air the Jim Bohannon Radio Talk Show ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What is the Hub of London ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "What is home banking ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "Who is the founder of Scientology ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What did Martin Luther post on the church door at Wittenberg ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What city has the world 's longest subway system ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What is a language spoken by the Sioux ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "Silly putty was invented by whom ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "Why did several San Diego schools stop serving apples to students ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "What Argentine revolutionary fought with Castro and died in Bolivia in May , 1979 ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What is the name for clouds that produce rain ?",
+        "label": 1,
+        "label_name": "ENTY"
+    }
+]

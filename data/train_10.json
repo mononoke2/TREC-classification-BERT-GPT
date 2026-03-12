@@ -1,0 +1,52 @@
+[
+    {
+        "text": "What corporation does Madonna advertise for ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What are the five richest countries in the world ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What vehicles are raced in the Tour de France ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What year was the ATM first introduced ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "Where were the 196 Summer Olympics held ?",
+        "label": 4,
+        "label_name": "LOC"
+    },
+    {
+        "text": "What household facility contains a float ball , ballcock , and overflow tube ?",
+        "label": 1,
+        "label_name": "ENTY"
+    },
+    {
+        "text": "What Argentine revolutionary fought with Castro and died in Bolivia in May , 1979 ?",
+        "label": 3,
+        "label_name": "HUM"
+    },
+    {
+        "text": "What will happen when sodium is put in water ?",
+        "label": 2,
+        "label_name": "DESC"
+    },
+    {
+        "text": "When is Bastille Day ?",
+        "label": 5,
+        "label_name": "NUM"
+    },
+    {
+        "text": "What is the Hub of London ?",
+        "label": 2,
+        "label_name": "DESC"
+    }
+]
