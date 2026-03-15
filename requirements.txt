@@ -5,3 +5,7 @@ scikit-learn
 pandas
 tqdm
 numpy
+matplotlib
+seaborn
+accelerate
+pydantic
