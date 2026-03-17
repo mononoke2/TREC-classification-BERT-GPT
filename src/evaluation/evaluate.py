@@ -140,6 +140,59 @@ def print_results_table(all_results: dict):
 
 
 # ---------------------------------------------------------------------------
+# Plotting
+# ---------------------------------------------------------------------------
+
+def plot_results(all_results: dict):
+    """
+    Generate line charts comparing BERT and GPT for each metric.
+    Saves the plot to results/metrics_comparison.png.
+    """
+    try:
+        import matplotlib.pyplot as plt
+    except ImportError:
+        print("\n[WARN] matplotlib is not installed. Skipping plot generation.")
+        return
+
+    models = sorted(set(m for m, _ in all_results))
+    metric_names = ["accuracy", "f1_micro", "f1_macro", "f1_weighted"]
+    
+    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+    fig.suptitle("Model Comparison: BERT vs GPT", fontsize=16)
+
+    for i, metric in enumerate(metric_names):
+        ax = axes[i // 2, i % 2]
+        
+        for model in models:
+            y_values = []
+            for size in _SIZE_ORDER:
+                key = (model, size)
+                val = all_results.get(key, {}).get(metric)
+                y_values.append(val)
+            
+            # Filter out None values to avoid breaking the line flow
+            x_plot = [x for x, y in zip(_SIZE_ORDER, y_values) if y is not None]
+            y_plot = [y for y in y_values if y is not None]
+            
+            if x_plot and y_plot:
+                ax.plot(x_plot, y_plot, marker='o', label=model.upper())
+
+        ax.set_title(metric.replace("_", " ").title())
+        ax.set_xlabel("Training Size")
+        ax.set_ylabel("Score")
+        ax.set_ylim(-0.05, 1.05)
+        ax.grid(True, linestyle="--", alpha=0.6)
+        if len(models) > 0 and i == 0:
+            ax.legend()
+
+    plt.tight_layout()
+    plot_path = os.path.join(RESULTS_DIR, "metrics_comparison.png")
+    plt.savefig(plot_path)
+    plt.close()
+    print(f"\n📊 Grafico di confronto salvato in: {plot_path}")
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -178,6 +231,7 @@ def main():
 
     if all_results:
         print_results_table(all_results)
+        plot_results(all_results)
 
     if errors:
         print("\nErrors encountered:")
