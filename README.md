@@ -130,6 +130,31 @@ python train_bert.py --train_size N     # Training set completo
 
 ---
 
+## GPT — Istruzioni
+
+```bash
+cd src/gpt
+
+python train_gpt.py --train_size 0     # Zero-shot generativo prompt-based (gpt2 base)
+python train_gpt.py --train_size 1
+python train_gpt.py --train_size 10
+python train_gpt.py --train_size 100
+python train_gpt.py --train_size 1000
+python train_gpt.py --train_size N     # Training set completo
+```
+
+**Strategia di training:**
+
+| Train size         | Modalità                                                                                                                                            |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `0`                | Zero-shot generativo — nessun fine-tuning, usa il prompt per generare direttamente la risposta (con fallback intelligente sui logit).               |
+| `1`, `10`          | SFT (Supervised Fine-Tuning) con **epoche fisse** (`MAX_EPOCHS=10`) — maschera applicata ai token di prompt, val split omesso per carenza di dati. |
+| `100`, `1000`, `N` | SFT con **early stopping** (patience=3, val split 20%)                                                                                              |
+
+**Output:** `src/evaluation/results/gpt_train_{size}.csv`
+
+---
+
 ## Output CSV — Formato Standard
 
 Ogni file di predizioni (BERT e GPT) ha questo formato:
@@ -156,102 +181,7 @@ Il framework legge automaticamente tutti i file in `results/` e stampa una tabel
 comparativa. Le metriche devono essere implementate in `src/evaluation/metrics.py`.
 
 ---
+### Created by
+**Denise Cilia** & **Eleonora Giuffrida** for
+**NLP** - Natural Language Processing 2025/2026
 
----
-
-## Completato
-
-### 1. GPT Zero-shot (train_size = 0)
-
-Per una comparazione valida con BERT zero-shot, il GPT deve essere usato in modalità
-**zero-shot**: nessun fine-tuning, solo il modello base con un prompt che descrive il task.
-
-Esempio di prompt:
-```
-Classify the following question into one of these categories:
-ABBR (abbreviation), ENTY (entity), DESC (description), HUM (human), LOC (location), NUM (numeric).
-
-Question: Who invented the telephone?
-Category:
-```
-
-Il modello deve rispondere con una singola label (`HUM`, `LOC`, ecc.).
-
----
-
-### 2. GPT con SFT (Supervised Fine-Tuning) — train_size = 1, 10, 100, 1000, N
-
-Sviluppato `src/gpt/train_gpt.py` che:
-
-- [X] Carica il subset di training da `data/train_{size}.json`
-- [X] Formatta i dati come coppie instruction/completion per SFT:
-  ```json
-  {"prompt": "Classify: Who invented the telephone?\nCategory:", "completion": " HUM"}
-  ```
-  Nota: "completion": si prende da "label_name"
-- [X] Esegue il fine-tuning del modello GPT per i diversi train_size
-- [X] Lancia l'inferenza sul test set `data/test.json`
-    Durante l'inferenza GPT, il modello genera una stringa (es. `"HUM"`).
-    Prima di salvare il CSV, è necessario convertirla in indice intero, perché il
-    framework si aspetta `predicted_label` come intero (0–5).
-
-    ```python
-    import sys
-    sys.path.append("src/shared")
-    from trec import _COARSE_LABELS
-    # _COARSE_LABELS = ["ABBR", "ENTY", "DESC", "HUM", "LOC", "NUM"]
-
-    generated_text = "HUM"                               # output grezzo del modello
-    predicted_label = _COARSE_LABELS.index(generated_text)  # → 3
-    predicted_label_name = generated_text                # → "HUM"
-    ```
-
-    > **Nota:** se il modello genera un output inatteso (es. `"Human"` invece di `"HUM"`),
-    > occorre un meccanismo di fallback (es. mappare al label più simile o assegnare -1).
-- [X] Salva le predizioni usando la funzione condivisa:
-  ```python
-  import sys; sys.path.append("src/shared")
-  from save_predictions import save_predictions
-  save_predictions(predictions, model_name="gpt", train_size=size)
-  ```
-
-**Formato delle predizioni** (deve essere identico a quello di BERT):
-
-```python
-predictions = [
-    {
-        "text": "Who invented the telephone?",
-        "true_label": 3,
-        "true_label_name": "HUM",
-        "predicted_label": 3,
-        "predicted_label_name": "HUM",
-    },
-    ...
-]
-```
-
----
-
-### 3. Metriche — `src/evaluation/metrics.py`
-
-Implementate le 4 funzioni:
-
-```python
-from sklearn.metrics import accuracy_score, f1_score
-
-def compute_accuracy(true_labels, predicted_labels) -> float:
-    return accuracy_score(true_labels, predicted_labels)
-
-def compute_f1_micro(true_labels, predicted_labels) -> float:
-    return f1_score(true_labels, predicted_labels, average="micro")
-
-def compute_f1_macro(true_labels, predicted_labels) -> float:
-    return f1_score(true_labels, predicted_labels, average="macro")
-
-def compute_f1_weighted(true_labels, predicted_labels) -> float:
-    return f1_score(true_labels, predicted_labels, average="weighted")
-```
-
-Generata la tabella comparativa finale BERT vs GPT.
-
----
