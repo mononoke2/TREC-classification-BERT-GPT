@@ -92,12 +92,12 @@ src/shared/trec.py
         │             │
         │             ▼ salva src/evaluation/results/bert_train_{size}.csv
         │
-        └──► src/gpt/train_gpt.py --train_size {0,1,10,100,1000,N}   [Completato]
+        └──► src/gpt/train_gpt.py --train_size {0,1,10,100,1000,N}   
                       │
                       ▼ salva src/evaluation/results/gpt_train_{size}.csv
                       │
                       ▼
-             src/evaluation/metrics.py   [Completato]
+             src/evaluation/metrics.py  
                       │
                       ▼
              src/evaluation/evaluate.py  → tabella comparativa finale
