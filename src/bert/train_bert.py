@@ -3,8 +3,8 @@ BERT Fine-tuning for TREC Question Classification.
 
 Usage:
     python train_bert.py --train_size 100
-    python train_bert.py --train_size 0   # true zero-shot via NLI (no BERT fine-tuning)
-    python train_bert.py --train_size N   # full training set
+    python train_bert.py --train_size 0   
+    python train_bert.py --train_size N  
 
 Training strategy:
     - train_size == 0         : zero-shot via NLI pipeline (facebook/bart-large-mnli)
@@ -60,16 +60,15 @@ BATCH_SIZE = 16
 MAX_EPOCHS = 10
 LEARNING_RATE = 2e-5
 SEED = 42
-NUM_LABELS = len(_COARSE_LABELS)   # 6
+NUM_LABELS = len(_COARSE_LABELS)   
 
-MAX_EPOCHS_WITH_EARLY_STOPPING = 50 # Upper bound on epochs when early stopping is active (large datasets)
+MAX_EPOCHS_WITH_EARLY_STOPPING = 50 # Upper bound on epochs when early stopping is active (for large datasets)
 EARLY_STOPPING_MIN_TRAIN_SIZE = 50  # Below this, skip early stopping
 EARLY_STOPPING_PATIENCE = 3         # Stop if val loss doesn't improve for N epochs
 VAL_SPLIT = 0.2                     # Fraction of training set used as validation
 
-# Human-readable descriptions for NLI zero-shot.
 # The NLI model computes: P(text entails "This is a <description> question")
-# More descriptive labels → better NLI performance vs. raw codes like "ABBR".
+# More descriptive labels will have better NLI performance rather than raw codes like "ABBR".
 NLI_LABEL_DESCRIPTIONS = {
     "ABBR": "abbreviation or acronym question",
     "ENTY": "entity question about a thing",
@@ -288,7 +287,7 @@ def main():
     print(f"Device: {device}")
     print(f"Training size: {train_size}")
 
-    # Test set (always the same, never used for training or validation)
+    # Test set 
     test_records = load_split(os.path.join(DATA_DIR, "test.json"))
 
     # -------------------------------------------------------------------

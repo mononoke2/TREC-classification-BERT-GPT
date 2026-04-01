@@ -20,6 +20,7 @@ import os
 import sys
 import csv
 import re
+import matplotlib.pyplot as plt
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -148,11 +149,6 @@ def plot_results(all_results: dict):
     Generate line charts comparing BERT and GPT for each metric.
     Saves the plot to results/metrics_comparison.png.
     """
-    try:
-        import matplotlib.pyplot as plt
-    except ImportError:
-        print("\n[WARN] matplotlib is not installed. Skipping plot generation.")
-        return
 
     models = sorted(set(m for m, _ in all_results))
     metric_names = ["accuracy", "f1_micro", "f1_macro", "f1_weighted"]
@@ -189,7 +185,7 @@ def plot_results(all_results: dict):
     plot_path = os.path.join(RESULTS_DIR, "metrics_comparison.png")
     plt.savefig(plot_path)
     plt.close()
-    print(f"\n📊 Grafico di confronto salvato in: {plot_path}")
+    print(f"\n Grafico di confronto salvato in: {plot_path}")
 
 
 # ---------------------------------------------------------------------------
@@ -244,7 +240,7 @@ def main():
         unimplemented.update(k for k, v in results.items() if v is None)
     if unimplemented:
         print(
-            f"\n⚠ The following metrics are not yet available in metrics.py: "
+            f"\n [WARN] The following metrics are not yet available in metrics.py: "
             f"{', '.join(sorted(unimplemented))}"
             f"If you want to use them, please implement them in metrics.py."
         )
